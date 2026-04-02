@@ -47,21 +47,21 @@ export function AppSidebar({ onLogout }: AppSidebarProps) {
   };
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" className="bg-blue-600 text-white border-r-0">
       <SidebarContent>
         {/* Brand */}
         <SidebarGroup>
           <div className="flex items-center gap-3 px-3 py-4">
-            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-100 shrink-0">
-              <GraduationCap className="w-5 h-5 text-blue-600" />
+            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-white/20 shrink-0">
+              <GraduationCap className="w-5 h-5 text-white" />
             </div>
-            {!collapsed && <span className="font-heading font-bold text-lg text-blue-800">AttendTrack</span>}
+            {!collapsed && <span className="font-heading font-bold text-lg text-white">AttendTrack</span>}
           </div>
         </SidebarGroup>
 
         {/* Navigation */}
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-blue-100">Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
@@ -69,10 +69,10 @@ export function AppSidebar({ onLogout }: AppSidebarProps) {
                   <SidebarMenuButton asChild>
                     <NavLink
                       to={item.url}
-                      className="hover:bg-blue-50 hover:text-blue-700 transition-colors"
-                      activeClassName="bg-blue-100 text-blue-800 font-medium border-r-2 border-blue-500"
+                      className="hover:bg-white/10 hover:text-white transition-colors text-white"
+                      activeClassName="bg-white/20 text-white font-medium border-r-2 border-white"
                     >
-                      <item.icon className="mr-2 h-4 w-4" />
+                      <item.icon className="mr-2 h-4 w-4 text-white" />
                       {!collapsed && <span>{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
@@ -87,15 +87,15 @@ export function AppSidebar({ onLogout }: AppSidebarProps) {
         <div className="flex items-center gap-3 px-3 py-3">
           <Avatar className="w-8 h-8 shrink-0">
             <AvatarImage src={user?.avatar} />
-            <AvatarFallback className="bg-blue-100 text-blue-700 text-xs font-bold">{initials}</AvatarFallback>
+            <AvatarFallback className="bg-white/20 text-white text-xs font-bold">{initials}</AvatarFallback>
           </Avatar>
           {!collapsed && (
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-foreground truncate">{user?.name}</p>
-              <p className="text-xs text-muted-foreground truncate">{user?.email}</p>
+              <p className="text-sm font-medium text-white truncate">{user?.name}</p>
+              <p className="text-xs text-blue-100 truncate">{user?.email}</p>
             </div>
           )}
-          <Button variant="ghost" size="icon" className="h-8 w-8 shrink-0 text-blue-600 hover:bg-blue-50" onClick={handleLogout}>
+          <Button variant="ghost" size="icon" className="h-8 w-8 shrink-0 text-white hover:bg-white/10" onClick={handleLogout}>
             <LogOut className="w-4 h-4" />
           </Button>
         </div>
