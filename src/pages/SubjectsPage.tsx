@@ -68,8 +68,8 @@ const SubjectsPage = () => {
     <div className="space-y-6 max-w-3xl">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold font-heading text-foreground">Subjects</h1>
-          <p className="text-muted-foreground text-sm mt-1">Manage your subjects and class counts</p>
+          <h1 className="text-2xl font-bold font-heading text-blue-700">Subjects</h1>
+          <p className="text-blue-600 text-sm mt-1">Manage your subjects and class counts</p>
         </div>
         <Button onClick={addSubject} className="transition-transform active:scale-95">
           <Plus className="w-4 h-4 mr-2" /> Add Subject

@@ -53,7 +53,7 @@ const AnalyticsPage = () => {
     return (
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold font-heading text-foreground">Analytics</h1>
+          <h1 className="text-2xl font-bold font-heading text-blue-700">Analytics</h1>
           <p className="text-muted-foreground text-sm mt-1">Visualize your attendance data</p>
         </div>
         <Card className="shadow-md border-border/50">
@@ -69,7 +69,7 @@ const AnalyticsPage = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold font-heading text-foreground">Analytics</h1>
+        <h1 className="text-2xl font-bold font-heading text-blue-700">Analytics</h1>
         <p className="text-muted-foreground text-sm mt-1">Visualize your attendance trends and statistics</p>
       </div>
 
