@@ -17,14 +17,14 @@ const variantStyles = {
 };
 
 const StatCard = ({ title, value, icon: Icon, variant = "default", className = "" }: StatCardProps) => (
-  <Card className={`shadow-md border-gray-200 hover:border-gray-300 transition-all hover:scale-[1.02] hover:shadow-lg bg-white ${className}`}>
+  <Card className={`shadow-lg border-blue-200 hover:border-blue-300 transition-all hover:scale-[1.02] hover:shadow-xl bg-white/90 backdrop-blur-sm ${className}`}>
     <CardContent className="flex items-center gap-4 p-5">
       <div className={`flex items-center justify-center w-12 h-12 rounded-xl ${variantStyles[variant]}`}>
         <Icon className="w-6 h-6" />
       </div>
       <div>
-        <p className="text-sm text-gray-600">{title}</p>
-        <p className="text-2xl font-bold font-heading text-gray-900">{value}</p>
+        <p className="text-sm text-blue-600">{title}</p>
+        <p className="text-2xl font-bold font-heading text-blue-900">{value}</p>
       </div>
     </CardContent>
   </Card>
