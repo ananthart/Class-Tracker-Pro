@@ -52,10 +52,10 @@ export function AppSidebar({ onLogout }: AppSidebarProps) {
         {/* Brand */}
         <SidebarGroup>
           <div className="flex items-center gap-3 px-3 py-4">
-            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-primary/10 shrink-0">
-              <GraduationCap className="w-5 h-5 text-primary" />
+            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-100 shrink-0">
+              <GraduationCap className="w-5 h-5 text-blue-600" />
             </div>
-            {!collapsed && <span className="font-heading font-bold text-lg text-foreground">AttendTrack</span>}
+            {!collapsed && <span className="font-heading font-bold text-lg text-blue-800">AttendTrack</span>}
           </div>
         </SidebarGroup>
 
@@ -69,8 +69,8 @@ export function AppSidebar({ onLogout }: AppSidebarProps) {
                   <SidebarMenuButton asChild>
                     <NavLink
                       to={item.url}
-                      className="hover:bg-muted/50"
-                      activeClassName="bg-primary/10 text-primary font-medium"
+                      className="hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                      activeClassName="bg-blue-100 text-blue-800 font-medium border-r-2 border-blue-500"
                     >
                       <item.icon className="mr-2 h-4 w-4" />
                       {!collapsed && <span>{item.title}</span>}
@@ -87,7 +87,7 @@ export function AppSidebar({ onLogout }: AppSidebarProps) {
         <div className="flex items-center gap-3 px-3 py-3">
           <Avatar className="w-8 h-8 shrink-0">
             <AvatarImage src={user?.avatar} />
-            <AvatarFallback className="bg-primary/10 text-primary text-xs font-bold">{initials}</AvatarFallback>
+            <AvatarFallback className="bg-blue-100 text-blue-700 text-xs font-bold">{initials}</AvatarFallback>
           </Avatar>
           {!collapsed && (
             <div className="flex-1 min-w-0">
@@ -95,7 +95,7 @@ export function AppSidebar({ onLogout }: AppSidebarProps) {
               <p className="text-xs text-muted-foreground truncate">{user?.email}</p>
             </div>
           )}
-          <Button variant="ghost" size="icon" className="h-8 w-8 shrink-0 text-muted-foreground" onClick={handleLogout}>
+          <Button variant="ghost" size="icon" className="h-8 w-8 shrink-0 text-blue-600 hover:bg-blue-50" onClick={handleLogout}>
             <LogOut className="w-4 h-4" />
           </Button>
         </div>

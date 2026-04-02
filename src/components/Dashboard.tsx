@@ -30,19 +30,19 @@ const Dashboard = ({ userName, onLogout }: DashboardProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-card/80 backdrop-blur-md">
+      <header className="sticky top-0 z-50 border-b border-blue-200 bg-white/90 backdrop-blur-md shadow-sm">
         <div className="container flex items-center justify-between h-16 px-4">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-primary/10">
-              <GraduationCap className="w-5 h-5 text-primary" />
+            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-100">
+              <GraduationCap className="w-5 h-5 text-blue-600" />
             </div>
-            <span className="font-heading font-bold text-lg text-foreground">AttendTrack</span>
+            <span className="font-heading font-bold text-lg text-blue-800">AttendTrack</span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-sm text-muted-foreground hidden sm:inline">Hi, {userName}</span>
-            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted-foreground">
+            <span className="text-sm text-blue-700 hidden sm:inline">Hi, {userName}</span>
+            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-blue-600 hover:bg-blue-50">
               <LogOut className="w-4 h-4" />
             </Button>
           </div>
