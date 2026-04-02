@@ -32,7 +32,7 @@ const Dashboard = ({ userName, onLogout }: DashboardProps) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-blue-400 bg-white/95 backdrop-blur-md shadow-lg">
+      <header className="sticky top-0 z-50 border-b border-blue-400 bg-blue-50/95 backdrop-blur-md shadow-lg">
         <div className="container flex items-center justify-between h-16 px-4">
           <div className="flex items-center gap-3">
             <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-200">
