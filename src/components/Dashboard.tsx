@@ -30,19 +30,19 @@ const Dashboard = ({ userName, onLogout }: DashboardProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+    <div className="min-h-screen bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-blue-300 bg-white/80 backdrop-blur-md shadow-sm">
+      <header className="sticky top-0 z-50 border-b border-blue-400 bg-white/95 backdrop-blur-md shadow-lg">
         <div className="container flex items-center justify-between h-16 px-4">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-100">
-              <GraduationCap className="w-5 h-5 text-blue-600" />
+            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-200">
+              <GraduationCap className="w-5 h-5 text-blue-700" />
             </div>
-            <span className="font-heading font-bold text-lg text-blue-800">AttendTrack</span>
+            <span className="font-heading font-bold text-lg text-blue-900">AttendTrack</span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-sm text-blue-700 hidden sm:inline">Hi, {userName}</span>
-            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-blue-600 hover:bg-blue-50">
+            <span className="text-sm text-blue-800 hidden sm:inline">Hi, {userName}</span>
+            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-blue-700 hover:bg-blue-100">
               <LogOut className="w-4 h-4" />
             </Button>
           </div>
